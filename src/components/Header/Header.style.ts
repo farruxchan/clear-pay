@@ -22,4 +22,8 @@ export const AppSettings = styled.div`
   display: flex;
   gap: 30px;
   align-items: center;
+
+  .AppImage {
+    flex: 0 0 22px;
+  }
 `;
