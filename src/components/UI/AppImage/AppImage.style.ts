@@ -3,16 +3,16 @@ import styled, { css } from "styled-components";
 interface IStyledImgProps {
   width?: string;
   height?: string;
-  borderRadius?: string;
+  $borderRadius?: string;
 }
 
 export const StyledImg = styled.div<IStyledImgProps>`
   overflow: hidden;
 
   ${(props) =>
-    props.borderRadius &&
+    props.$borderRadius &&
     css`
-      border-radius: ${props.borderRadius};
+      border-radius: ${props.$borderRadius};
     `};
   ${(props) =>
     props.width &&

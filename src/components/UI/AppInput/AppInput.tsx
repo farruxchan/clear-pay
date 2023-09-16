@@ -23,10 +23,10 @@ export const AppInput = ({
   ...props
 }: IAppInputProps) => {
   return (
-    <InputWrapper className="inputWrapper" hasError={hasError}>
+    <InputWrapper className="inputWrapper" $hasError={hasError}>
       <Input
-        bgc={bgc}
-        borderColor={borderColor}
+        $bgc={bgc}
+        $borderColor={borderColor}
         type={type}
         name={name}
         disabled={isDisabled}

@@ -24,6 +24,6 @@ export const AppSettings = styled.div`
   align-items: center;
 
   .AppImage {
-    flex: 0 0 22px;
+    flex: 1 0 22px;
   }
 `;

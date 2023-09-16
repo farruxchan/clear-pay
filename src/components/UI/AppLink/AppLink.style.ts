@@ -1,7 +1,11 @@
 import styled, { css } from "styled-components";
-import { IAppLinkProps } from "./AppLink";
 
-export const StyledLink = styled.div<Partial<IAppLinkProps>>`
+interface IStyledLinkProps {
+  $hasIcon?: boolean;
+  align?: "right" | "left";
+}
+
+export const StyledLink = styled.div<IStyledLinkProps>`
   cursor: pointer;
   padding: 10px 15px;
   border-radius: 7px;
@@ -16,7 +20,7 @@ export const StyledLink = styled.div<Partial<IAppLinkProps>>`
     font-size: calc(0.2px + 14.3px); //? 18 | 15
   }
   ${(props) =>
-    !props.hasIcon &&
+    !props.$hasIcon &&
     css`
       .linkLabel {
         text-decoration: underline;
