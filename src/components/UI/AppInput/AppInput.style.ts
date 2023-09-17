@@ -1,20 +1,20 @@
 import styled, { css } from "styled-components";
 
 interface IInputProps {
-  borderColor?: string;
-  bgc?: string;
-  hasError: boolean;
+  $borderColor?: string;
+  $bgc?: string;
+  $hasError: boolean;
 }
 
 export const Input = styled.input<Partial<IInputProps>>`
   border: 1px solid
-    ${(props) => (props.borderColor ? props.borderColor : "transparent")};
+    ${(props) => (props.$borderColor ? props.$borderColor : "transparent")};
   border-radius: 10px;
   padding: 14px 20px;
   padding-right: 60px;
 
   background-color: ${(props) =>
-    props.bgc ? props.bgc : props.theme.colors.bgc};
+    props.$bgc ? props.$bgc : props.theme.colors.bgc};
   transition: 200ms;
 
   &::placeholder {
@@ -72,7 +72,7 @@ export const InputWrapper = styled.div<IInputProps>`
   }
 
   ${(props) =>
-    props.hasError &&
+    props.$hasError &&
     css`
       /* box-shadow: 0 0 10px 2px ${(props) => props.theme.colors.red}; */
       input {

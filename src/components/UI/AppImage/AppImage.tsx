@@ -23,7 +23,7 @@ export const AppImage = ({
     <StyledImg
       width={width}
       height={height}
-      borderRadius={borderRadius}
+      $borderRadius={borderRadius}
       className="AppImage"
     >
       {imgSrc ? (
