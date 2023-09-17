@@ -1,7 +1,9 @@
 import { AppButton } from "../UI/AppButton/AppButton";
 import { AppInput } from "../UI/AppInput/AppInput";
 import { AppLink } from "../UI/AppLink/AppLink";
+import { AppMaskedInput } from "../UI/Maskedinput/Maskedinput";
 import { StyledTransferBlock } from "./TransfersElems.style";
+import { } from "react-hook-form";
 
 interface ITransferBlockProps {}
 
@@ -10,16 +12,26 @@ export const TransferBlock = ({}: ITransferBlockProps) => {
     <StyledTransferBlock>
       <div className="transferPart transferIn">
         <h3>Счет списания</h3>
-        <AppInput
-          isDisabled={false}
-          hasError={false}
+        <AppMaskedInput
+          // @ts-ignore
           placeholder="Номер карты"
+          // @ts-ignore
           iconName="card"
+          format="#### #### #### ####"
         />
-        <AppInput
-          hasError={false}
+        <AppMaskedInput
+          // @ts-ignore
           placeholder="Сумма перевода"
-          iconName="cash"
+          // @ts-ignore
+          iconName="card"
+          format="## ### ###"
+        />
+        <AppMaskedInput
+        // @ts-ignore
+        placeholder="Счёт зачисления"
+        // @ts-ignore
+        iconName="card"
+        format="#### #### #### ####"
         />
         <AppLink align="right" linkLabel="Выбрать по номеру телефона" />
       </div>
